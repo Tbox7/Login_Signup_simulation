@@ -1,0 +1,153 @@
+#imports
+import time
+import sys
+
+#Welcome texts
+print("Welcome to Username Password Simulator")
+time.sleep(2)
+print("Please Wait A Few Moments For The Simulation To Start")
+time.sleep(6)
+#entiering new login and password adn email or old login (numbering system)
+print("Simulation Starting. . .")
+time.sleep(1)
+print("3")
+time.sleep(1)
+print("2")
+time.sleep(1)
+print("1")
+time.sleep(1)
+def gap():
+    #for added effect as working simulaton (only for aestheics)
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+    print("")
+
+gap()
+time.sleep(3)
+print("Simulation Initialized")
+time.sleep(2)
+def begin():
+    global signin
+    global loginusername
+    global loginpassword
+    print("Please Choose Method of Sign-in")
+    print("[1] Login")
+    print("[2] Sign-up")
+    signin = input("Type [1] or [2]")
+    if (signin != "1" and signin != "2"):
+        begin()
+    #Login username/password
+    if (signin == "1"):
+        print("Enter Login Details")
+        time.sleep(2)
+        
+        loginusername = input("Username: ")
+        
+        loginpassword = input("Password: ")
+        login(loginusername, loginpassword)
+    #sign up Username/Password/email
+    else:
+        print("Enter Sign-up Details")
+        time.sleep(2)
+        global regusername
+        regusername = input("Username: ")
+        global regpassword
+        regpassword = input("Password: ")
+        global email
+        email = input("Email: ")
+        reg(regusername, regpassword, email)
+        
+
+#hashing the password
+
+
+#saving the username and redirecting the password and email
+def reg(regusername, regpassword, email):
+    file = open("User_details.txt", "a")
+    file.write("\n"+regusername+","+regpassword+","+email)
+    file.close() 
+    time.sleep(2)
+    print("Account Registered")
+    begin()
+
+#match username with username 
+def login(loginusername, loginpassword):
+    check = False
+
+    #admin access
+    admin_password = "Admin"
+    admin_username = "Admin"
+    if (loginusername == "Admin" and loginpassword == "Admin"):
+        with open("User_details.txt","r") as a: 
+            lines = a.readlines()
+            for i in lines:
+                print(i)
+        #give admin rights to remove/add/change/ properties(user details) on the file (progress:to do)
+        print("Simulation over")
+        sys.exit()
+        
+    else:
+        file = open("User_details.txt","r")
+        for i in file:
+            a,b,c = i.split(",")
+            b = b.strip()  
+            if (a == loginusername and b == loginpassword):
+                check = True
+                break
+    file.close
+    if(check):
+        print("Login is Successful")
+        ans = input("Want to Try Again?\n [1] yes \n [2] no")
+        if (ans == "2"):
+            print("Simulation Over")
+            sys.exit()
+        else: 
+            begin()
+    else:
+        print("Username or Password in correct")
+        begin()
+    
+
+    admin = input("[1] go back \n [2] end simulation")
+    if (admin == 1):
+        begin()
+    else:
+        print("Simulation ended")
+
+#hash password given 
+#try the hash function and see if it can be used as a potential hasing method.... if bot look at camera roll for original hacking algorithm
+
+#retrive hashed password for given and match
+
+#if password != retry password 3 tries (with messages showing how man tries)
+
+
+#if password entered wrong 3 times, lock site print("Email notification sent for attempted login")
+
+
+#retreive email for username given and send automated email of attempted login
+
+#admin password entered post: view all usernames and passwords
+
+#################### EXECTUION #####################
+begin()
