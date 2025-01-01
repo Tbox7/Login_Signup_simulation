@@ -26,3 +26,6 @@ def hash(password):
 def validated():
     print("SECRET MESSAGE")
     start()
+###Runtime###
+print("Try out the Login and Signup Simulation")
+start()
