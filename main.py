@@ -1,3 +1,3 @@
-import classes
+import functions
 print("Try out the Login and Signup Simulation")
-classes.start()
+functions.start()
