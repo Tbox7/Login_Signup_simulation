@@ -55,3 +55,17 @@ def contents(database, cursor):
 ###Wipes tables and restarts program
 def wipe():
     os.remove('entries.db')
+  ef
+wef
+we
+fwe
+f
+we
+fwe
+f
+wef
+we
+f
+wef
+we
+fewfwefwefew
