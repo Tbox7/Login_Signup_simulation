@@ -8,5 +8,5 @@
 ![login](https://github.com/user-attachments/assets/e23f9627-a409-4eaa-bac1-8fbee944d4d1)
 ## Incorrect Login Credential Showcase 
 ![loginerror](https://github.com/user-attachments/assets/22987242-54c7-42f5-b2cd-71ee736470b1)
-## Login Credential Database
+## How It's Stored
 ![db_screenshot](https://github.com/user-attachments/assets/8e4ed070-3fc4-4b7c-aedd-cb4858543c45)
