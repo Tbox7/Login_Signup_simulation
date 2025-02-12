@@ -4,11 +4,7 @@
 - Program will create a file called "entries.db" that will store the usernames and hashed passwords in plain text.
 
 # Creating A User Showcase
-
-
-https://github.com/user-attachments/assets/552fd0d2-0360-4f27-8930-6db224910c38
-
-
+![signup](https://github.com/user-attachments/assets/fd981182-5deb-437f-8c27-00ffa8d2d259)
 # Logging In Showcase
 
 
